@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Linking } from "react-native";
+import { View, Linking, Image, StyleSheet, ImageBackground } from "react-native";
 import {
   Layout,
   TopNav,
@@ -13,11 +13,36 @@ import {
 import { Ionicons } from "@expo/vector-icons";
 
 export default function ({ navigation }) {
+
+  //const staticImage = require("./src/assets/icon.png");
   const { isDarkmode, setTheme } = useTheme();
+
+  const styles = StyleSheet.create({
+
+    logo: {
+      width: 26,
+      height: 28,
+    },
+    ImageBackground: {
+      flex: 1,
+      resizeMode: "cover",
+      width: "100%",
+      alignItems: "center",
+    },
+
+
+
+    
+
+   
+  });
+
+
+
   return (
     <Layout>
       <TopNav
-        middleContent="Home"
+        middleContent="Aplicacion Mobil"
         rightContent={
           <Ionicons
             name={isDarkmode ? "sunny" : "moon"}
@@ -42,19 +67,39 @@ export default function ({ navigation }) {
       >
         <Section>
           <SectionContent>
-            <Text fontWeight="bold" style={{ textAlign: "center" }}>
-              These UI components provided by Rapi UI
-            </Text>
-            <Button
-              style={{ marginTop: 10 }}
-              text="Rapi UI Documentation"
-              status="info"
-              onPress={() => Linking.openURL("https://rapi-ui.kikiding.space/")}
+            <Text  style={{ textAlign: "center" }}>
+            <Image
+              resizeMode="contain"
+              style={{
+                height: 100,
+                width: 100,
+                padding: 0,
+              }}
+              
+              source={require("../../assets/icon.png")}
             />
+             {"\n"}
+             {"\n"}
+             {"\n"}
+             {"\n"}
+             {"\n"}
+              Logo de App
+              </Text>
+              
             <Button
-              text="Go to second screen"
+              text="Iniciar Session"
               onPress={() => {
-                navigation.navigate("SecondScreen");
+                navigation.navigate("Login");
+              }}
+              style={{
+                marginTop: 10,
+              }}
+            />
+            
+            <Button
+              text="Acerca API "
+              onPress={() => {
+                navigation.navigate("About");
               }}
               style={{
                 marginTop: 10,
@@ -62,6 +107,24 @@ export default function ({ navigation }) {
             />
           </SectionContent>
         </Section>
+        
+          <View  fontWeight="bold" style={{ textAlign: "center", color: "#ddd", padding: 16 }}>
+            <Text>
+              Hecho por Freddy Lopez  © 2020 - 2023
+            </Text>
+            <Button
+              style={{ marginTop: 10 }}
+              text="Mi Sitio Web"
+              status="info"
+              onPress={() => Linking.openURL("https://freddx-web.github.io/Bytech-website/")}
+            />
+            
+          </View>
+        
+          
+     
+    
+
       </View>
     </Layout>
   );
