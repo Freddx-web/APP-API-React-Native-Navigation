@@ -162,7 +162,7 @@ _Below is an example of how you can instruct your audience on installing and set
    npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
    ```
    
-4. Start App `config.js`
+4. Start App `package.json`
    ```js
    npm start
    ```
