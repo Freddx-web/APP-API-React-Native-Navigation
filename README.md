@@ -92,8 +92,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot](https://example.com)]
-[![Product Name Screen Shot2][product-screenshot2](https://example.com)]
+[![Product Name Screen Shot][product-screenshot]]
+[![Product Name Screen Shot2][product-screenshot2]]
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -107,7 +107,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-[![Product Name Screen Shot3][product-screenshot3](https://example.com)]
+[![Product Name Screen Shot3][product-screenshot3]]
 
 ### Built With
 
