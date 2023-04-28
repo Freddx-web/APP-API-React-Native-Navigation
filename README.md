@@ -130,9 +130,19 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* npm
+* npm 
   ```sh
-  npm install npm@latest -g
+  
+  npm install @expo/vector-icons @react-navigation/native-stack @react-navigation/native
+  
+  
+  ```
+  
+  ```sh
+  
+  npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
+  
+  
   ```
 
 ### Installation
@@ -142,15 +152,19 @@ _Below is an example of how you can instruct your audience on installing and set
 1. Get a free API Key at [https://example.com](https://example.com)
 2. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/Freddx-web/APP-API-React-Native-Navigation.git
    ```
-3. Install NPM packages
+3. Install NPM packages 
    ```sh
-   npm install
+   npm install @expo/vector-icons @react-navigation/native-stack @react-navigation/native
    ```
-4. Enter your API in `config.js`
+   ```sh
+   npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
+   ```
+   
+4. Start App `config.js`
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   npm start
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
