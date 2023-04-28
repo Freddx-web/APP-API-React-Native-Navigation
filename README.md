@@ -94,8 +94,6 @@
 
 [![Product Name Screen Shot][product-screenshot](https://example.com)]
 [![Product Name Screen Shot2][product-screenshot2](https://example.com)]
-[![Product Name Screen Shot3][product-screenshot3](https://example.com)]
-[![Product Name Screen Shot4][product-screenshot4](https://example.com)]
 
 There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
 
@@ -109,6 +107,7 @@ Of course, no one template will serve all projects since your needs may be diffe
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+[![Product Name Screen Shot3][product-screenshot3](https://example.com)]
 
 ### Built With
 
@@ -229,7 +228,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/freddr-ruiz-90932b202/
 [product-screenshot]: images/3523543.jpg
-[product-screenshot2]: images/0501c7cb-74eb-4c0d-bc6f-4634bd0bf709.png
+[product-screenshot2]: images/all-logos.png
+[product-screenshot3]: images/0501c7cb-74eb-4c0d-bc6f-4634bd0bf709.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
