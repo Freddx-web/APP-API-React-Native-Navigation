@@ -117,25 +117,36 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-### installations
+### Configuration in Git
+
+1. Clone from project repository in Git File Manager
+   ```sh
+   git clone https://github.com/Freddx-web/APP-API-React-Native-Navigation.git
+   ```
+2. Check project status
+   ```sh
+   git status 
+   ```
+
+3. See previous versions
+   ```sh
+   git log --pretty=oneline --abbrev-commit  
+   ```
+
+### installations 
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   
-   git clone https://github.com/Freddx-web/APP-API-React-Native-Navigation.git
 
-   ```
-3. Install NPM dependencies DEV@
+2. Install NPM dependencies DEV@
    ```sh
    npm install @expo/vector-icons @react-navigation/native-stack @react-navigation/native
    ```
-4. Install NPM dependencies 
+3. Install NPM dependencies 
   ```sh
   
-  npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
+  npm install expo expo-font expo-asset react-native react-dom react-native-rapi-ui react-native-safe-area-context react-native-screens 
 
   ```
 
@@ -145,7 +156,10 @@ _Below is an example of how you can instruct your audience on installing and set
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-
+2. Install NPM dependencies DEV@
+   ```sh
+   npm start 
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
