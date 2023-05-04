@@ -12,7 +12,18 @@ import {
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
 
+
+import { FAB, Portal, Provider } from 'react-native-paper';
+
+
 export default function ({ navigation }) {
+ 
+ const [state, setState] = React.useState({ open: false });
+
+  const onStateChange = ({ open }) => setState({ open });
+
+  const { open } = state;
+
 
 
 const styles = StyleSheet.create({
@@ -36,48 +47,15 @@ const styles = StyleSheet.create({
   },
 });
 
-//========================================================//
-  // Return API
-  //========================================================//
-
-
-  const [fetchedState,setFetchedState]=useState(null);
-  const [usersData,setUsersData]=useState([]);
-
-
-
-  const getData=async()=>{
-    try{
-
-
-      
-      const response=await fetch('https://jsonplaceholder.typicode.com/users');
-      const data=await response.json();
-      setUsersData(data)
-
-
-
-    }
-    catch(error){
-      console.log(error)
-    }
-    finally{
-      setFetchedState(null);
-    }
-  }
-
-
-  useEffect(() => {
-    setFetchedState('loading')
-    setTimeout(()=>getData(),3000);
-  },[])
-
 
 
 
   const { isDarkmode, setTheme } = useTheme();
-	return (
-	  <Layout>
+
+
+
+  return (
+    <Layout>
       <TopNav
         middleContent="API Mobil"
         leftContent={
@@ -103,28 +81,83 @@ const styles = StyleSheet.create({
           }
         }}
       />
-			<View
-				style={{
-					flex: 1,
-					alignItems: 'center',
-					justifyContent: 'center',
-				}}
-			>
+      <View
+        style={{
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
 
 
-				<Text>Api email Usuarios</Text>
-
-        <View style={styles.container}>
-        {
-         fetchedState ? <Text style={styles.loadingtext}>Loading Data...</Text> :
-         usersData.map(_user=><Text style={styles.text} key={_user.id}>{_user.email}</Text>)
-        }
-        </View>
+        
 
 
 
 
-			</View>
-		</Layout>
-	);
+
+<Provider>
+      <Portal>
+        <FAB.Group
+          open={open}
+          visible
+          icon={open ? 'calendar-today' : 'plus'}
+          actions={[
+            { icon: 'plus', onPress: () => console.log('Pressed add') },
+            {
+              icon: 'star',
+              label: 'Star',
+              onPress: () => console.log('Pressed star'),
+            },
+            {
+              icon: 'email',
+              label: 'Email',
+              onPress: () => console.log('Pressed email'),
+            },
+            {
+              icon: 'bell',
+              label: 'Remind',
+              onPress: () => console.log('Pressed notifications'),
+            },
+          ]}
+          onStateChange={onStateChange}
+          onPress={() => {
+            if (open) {
+              // do something if the speed dial is open
+            }
+          }}
+        />
+      </Portal>
+    </Provider>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </View>
+    </Layout>
+  );
 }

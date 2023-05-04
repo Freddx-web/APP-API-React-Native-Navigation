@@ -95,19 +95,16 @@
 [![Product Name Screen Shot][product-screenshot]]
 [![Product Name Screen Shot2][product-screenshot2]]
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+Test the React Native project with [Expo Go](https://expo.dev/), using the [React Navigation](https://reactnavigation.org/) components as main templates for the development framework.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
+* Latest version of node.js 
+* Installing projects for React Native with Expo
+```sh  
+  npx create-expo-app app-test-react-native
+```
 * You should implement DRY principles to the rest of your life :smile:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-[![Product Name Screen Shot3][product-screenshot3]]
 
 ### Built With
 
@@ -120,6 +117,27 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### installations
+
+_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+
+1. Get a free API Key at [https://example.com](https://example.com)
+2. Clone the repo
+   ```sh
+   
+   git clone https://github.com/Freddx-web/APP-API-React-Native-Navigation.git
+
+   ```
+3. Install NPM dependencies DEV@
+   ```sh
+   npm install @expo/vector-icons @react-navigation/native-stack @react-navigation/native
+   ```
+4. Install NPM dependencies 
+  ```sh
+  
+  npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
+
+  ```
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -127,45 +145,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm 
-  ```sh
-  
-  npm install @expo/vector-icons @react-navigation/native-stack @react-navigation/native
-  
-  
-  ```
-  
-  ```sh
-  
-  npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
-  
-  
-  ```
-
-### Installation
-
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/Freddx-web/APP-API-React-Native-Navigation.git
-   ```
-3. Install NPM packages 
-   ```sh
-   npm install @expo/vector-icons @react-navigation/native-stack @react-navigation/native
-   ```
-   ```sh
-   npm install react-dom expo-font react-native-rapi-ui react-native-safe-area-context react-native-screens 
-   ```
-   
-4. Start App `package.json`
-   ```js
-   npm start
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
