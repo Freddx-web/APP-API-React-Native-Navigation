@@ -1,5 +1,12 @@
 import React, { useState, useEffect, Component } from "react";
-import { View, Linking, Image, StyleSheet, ImageBackground } from "react-native";
+import { 
+	View, 
+	Linking, 
+	Image,
+	StyleSheet, 
+	ImageBackground, 
+	FlatList, 
+	ActivityIndicator } from "react-native";
 import {
   Layout,
   TopNav,
@@ -11,48 +18,56 @@ import {
   themeColor,
 } from "react-native-rapi-ui";
 import { Ionicons } from "@expo/vector-icons";
-
-
 import { FAB, Portal, Provider } from 'react-native-paper';
 
-
 export default function ({ navigation }) {
- 
- const [state, setState] = React.useState({ open: false });
 
+  //Style 
+  const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      marginTop: 20,
+    },
+    scrollView: {
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
+    card: {
+      flex: 0,
+      marginTop: 20,
+      marginHorizontal: 1,
+    },
+    cardtext: {
+      fontSize: 19,
+      color: "#000"
+    },
+  });
+
+  // FAB Tab
+  const [state, setState] = React.useState({ open: false });
   const onStateChange = ({ open }) => setState({ open });
-
   const { open } = state;
 
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginTop: 20,
-  },
-  scrollView: {
-    
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  card: {
-    flex: 0,
-    marginTop: 20,
-    marginHorizontal: 1,
-  },
-  cardtext: {
-    fontSize: 19,
-    color: "#000"
-  },
-});
-
-
-
-
+  // Set Darkmode
   const { isDarkmode, setTheme } = useTheme();
 
-
+  // Api 
+  const [isLoading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
+  const getMovies = async () => {
+    try {
+      const response = await fetch('https://reactnative.dev/movies.json');
+      const json = await response.json();
+      setData(json.movies);
+    } catch (error) {
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  useEffect(() => {
+    getMovies();
+  }, []);
 
   return (
     <Layout>
@@ -81,47 +96,47 @@ const styles = StyleSheet.create({
           }
         }}
       />
-      <View
-        style={{
-          flex: 1,
-          alignItems: 'center',
-          justifyContent: 'center',
-        }}
-      >
-
-
-        
-
-
-
-
-
-<Provider>
-      <Portal>
-        <FAB.Group
-          open={open}
-          visible
-          icon={open ? 'calendar-today' : 'plus'}
-          actions={[
-            { icon: 'plus', onPress: () => console.log('Pressed add') },
-            {
-              icon: 'star',
-              label: 'Star',
-              onPress: () => console.log('Pressed star'),
-            },
-            {
-              icon: 'email',
-              label: 'Email',
-              onPress: () => console.log('Pressed email'),
-            },
-            {
-              icon: 'bell',
-              label: 'Remind',
-              onPress: () => console.log('Pressed notifications'),
-            },
-          ]}
-          onStateChange={onStateChange}
-          onPress={() => {
+      <Provider>
+        <View style={{flex: 1, padding: 24}}>
+            {isLoading ? (
+            <ActivityIndicator />
+            ) : (
+            <FlatList
+              data={data}
+              keyExtractor={({id}) => id}
+              renderItem={({item}) => (
+              <Text>
+                {item.title}, {item.releaseYear}
+              </Text>
+            )}
+          />
+        )}
+        </View>
+        <Portal>
+          <FAB.Group
+            open={open}
+            visible
+            icon={open ? 'calendar-today' : 'plus'}
+            actions={[
+              { icon: 'plus', onPress: () => console.log('Pressed add') },
+              {
+                icon: 'star',
+                label: 'Star',
+                onPress: () => console.log('Pressed star'),
+              },
+              {
+                icon: 'email',
+                label: 'Email',
+                onPress: () => console.log('Pressed email'),
+              },
+              {
+                icon: 'bell',
+                label: 'Remind',
+                onPress: () => console.log('Pressed notifications'),
+              },
+            ]}
+            onStateChange={onStateChange}
+            onPress={() => {
             if (open) {
               // do something if the speed dial is open
             }
@@ -129,35 +144,10 @@ const styles = StyleSheet.create({
         />
       </Portal>
     </Provider>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </View>
-    </Layout>
+  </Layout>
   );
 }
+
+
+
+/// https://snack.expo.dev/Kc1HhNdf7

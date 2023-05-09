@@ -102,11 +102,9 @@ Test the React Native project with [Expo Go](https://expo.dev/), using the [Reac
 ```sh  
   npx create-expo-app app-test-react-native
 ```
-# Expo GO 
+* You should implement DRY principles to the rest of your life :smile:
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-[![Product Name Screen Shot3][product-screenshot3]]
 
 ### Built With
 
@@ -116,12 +114,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![JQuery][JQuery.com]][JQuery-url]
-
-# React Navigation
-
-What follows within the Fundamentals section of this documentation is a tour of the most important aspects of React Navigation. It should cover enough for you to know how to build your typical small mobile application, and give you the background that you need to dive deeper into the more advanced parts of React Navigation.
-
-[![Product Name Screen Shot4][product-screenshot4]]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -244,8 +236,7 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-url]: https://www.linkedin.com/in/freddr-ruiz-90932b202/
 [product-screenshot]: images/3523543.jpg
 [product-screenshot2]: images/35245345345.png
-[product-screenshot3]: images/Expo-Go-Flow.jpg
-[product-screenshot4]: images/react-navigation-url.jpg
+[product-screenshot3]: images/0501c7cb-74eb-4c0d-bc6f-4634bd0bf709.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
